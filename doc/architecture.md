@@ -1,6 +1,6 @@
-## Architecture & Build Plan (Neutral-Infra Patch v1)
+## Architecture & Build Plan (Neutral-Infra v1)
 
-Below updates adapt the previously drafted architecture to Lucendex's **neutral infrastructure + thin-trade bootstrap UI** strategy. Copy/paste this into your architecture section.
+This document is the current architecture for LucenDEX's **neutral infrastructure + thin-trade bootstrap UI** strategy.
 
 ---
 
@@ -812,3 +812,31 @@ Before deployment:
 - [ ] Credential exposure tests pass (no secrets in errors/logs)
 - [ ] Security test coverage ≥90%
 - [ ] Incident response hooks integrated
+
+---
+
+## Why Not Native `path_find`?
+
+Native `path_find` is a useful primitive but does not provide partner-grade guarantees.
+
+| Capability | Native `path_find` | LucenDEX |
+|-----------|-------------------|---------|
+| Circuit breakers | ❌ | ✅ Price anomaly detection + auto-pause |
+| Quote binding | ❌ | ✅ blake2b-256 QuoteHash |
+| Replay prevention | ❌ | ✅ used_quotes tracking |
+| Rate limits + SLAs | ❌ | ✅ Per-partner quotas + metering |
+| Compliance audit trail | ❌ | ✅ 90-day retention, no PII |
+
+LucenDEX wraps XRPL primitives into **deterministic infrastructure** that partners can rely on.
+
+---
+
+## XRPL 3.1.0 Alignment
+
+XRPL 3.1.0 introduces LendingProtocol (XLS-66). This is a **Phase 2** opportunity:
+
+- Atomic leveraged swaps using protocol-native primitives
+- Market maker inventory funding
+- Institutional margin workflows
+
+LucenDEX treats LendingProtocol as optional and **guardrail-only**: QuoteHash binding, circuit breakers, and partner-only exposure remain mandatory.

@@ -15,6 +15,16 @@ Lucendex is a neutral, non‑custodial execution layer for XRPL trading — a de
 * CEXs dominate price discovery and liquidation cascades, increasing systemic fragility.
 * Institutional integrators need a safe, auditable execution layer rather than another retail‑facing DEX.
 
+**Why not native `path_find`?**
+
+| Capability | Native `path_find` | LucenDEX |
+|-----------|-------------------|---------|
+| Circuit breakers | ❌ | ✅ Price anomaly detection + auto-pause |
+| Quote binding | ❌ | ✅ QuoteHash (tamper-evident) |
+| Replay prevention | ❌ | ✅ used_quotes tracking |
+| Rate limits + SLAs | ❌ | ✅ Per-partner quotas + metering |
+| Compliance audit trail | ❌ | ✅ 90-day retention, no PII |
+
 **Core Design Pillars**
 
 * Non‑custodial by design — never hold user funds.
