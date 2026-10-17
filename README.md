@@ -1,8 +1,8 @@
 # Lucendex
 
-[![Tests](https://img.shields.io/badge/tests-passing-success)](https://github.com/2pk03/lucendex/actions/workflows/test.yml)
-[![Race Detector](https://img.shields.io/badge/race_detector-passing-success)](https://github.com/2pk03/lucendex/actions/workflows/test.yml)
-[![Core Engine](https://img.shields.io/badge/core_coverage-89%25-success)](https://github.com/2pk03/lucendex)
+[![Tests](https://img.shields.io/badge/tests-passing-success)](https://github.com/novatechflow/lucendex/actions/workflows/test.yml)
+[![Race Detector](https://img.shields.io/badge/race_detector-passing-success)](https://github.com/novatechflow/lucendex/actions/workflows/test.yml)
+[![Core Engine](https://img.shields.io/badge/core_coverage-89%25-success)](https://github.com/novatechflow/lucendex)
 [![Go](https://img.shields.io/badge/go-1.25+-blue)](https://go.dev/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
@@ -244,3 +244,5 @@ We welcome:
 - **Website**: https://lucendex.com
 - **Documentation**: https://lucendex.com/docs
 - **XRPL**: https://xrpl.org
+- **Background**: [The Case for XRP: Global Payment Clearing](https://www.novatechflow.com/2023/10/the-case-for-xrp-global-payment.html) on novatechflow.com
+- **Author**: Alexander Alten ([novatechflow.com](https://www.novatechflow.com))
