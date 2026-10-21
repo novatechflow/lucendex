@@ -1,5 +1,7 @@
 # Lucendex
 
+> **Status: archived (October 2026).** This repository is no longer maintained. It is a reference implementation and is not production ready: the routing engine is not wired to live liquidity, and the partner API was never launched. Development has moved on to [Scalytics Lascaris](https://www.scalytics.io/lascaris). The code stays available under the MIT license for reading and reuse.
+
 [![Tests](https://img.shields.io/badge/tests-passing-success)](https://github.com/novatechflow/lucendex/actions/workflows/test.yml)
 [![Race Detector](https://img.shields.io/badge/race_detector-passing-success)](https://github.com/novatechflow/lucendex/actions/workflows/test.yml)
 [![Core Engine](https://img.shields.io/badge/core_coverage-89%25-success)](https://github.com/novatechflow/lucendex)
